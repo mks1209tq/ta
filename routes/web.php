@@ -18,3 +18,13 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+Route::resource('vacancies', App\Http\Controllers\VacancyController::class);
+
+Route::resource('positions', App\Http\Controllers\PositionController::class);
+
+Route::resource('applications', App\Http\Controllers\ApplicationController::class);
+
+
+Route::resource('documents', App\Http\Controllers\DocumentController::class);

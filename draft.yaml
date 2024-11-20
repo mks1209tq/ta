@@ -1,5 +1,22 @@
 models:
-  # ...
+  Vacancy:
+    name: string:40, nullable
+    softDeletes
+  Position:
+    name: string:40, nullable
+    vacancy_id: integer, nullable
+    softDeletes
+  Application:
+    vacancy_id: integer, nullable
+    notice_period: integer, nullable
+    softDeletes
 
 controllers:
-  # ...
+  Vacancy:
+    resource
+  Position:
+    resource
+  Application:
+    resource
+
+seeders: Vacancy, Position, Application

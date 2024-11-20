@@ -1,2 +1,21 @@
+created:
+    - app/Http/Controllers/DocumentController.php
+    - database/factories/DocumentFactory.php
+    - database/migrations/2024_11_20_062159_create_documents_table.php
+    - app/Models/Document.php
+    - database/seeders/DocumentSeeder.php
+    - tests/Feature/Http/Controllers/DocumentControllerTest.php
+    - app/Http/Requests/DocumentStoreRequest.php
+    - app/Http/Requests/DocumentUpdateRequest.php
+    - resources/views/document/index.blade.php
+    - resources/views/document/create.blade.php
+    - resources/views/document/show.blade.php
+    - resources/views/document/edit.blade.php
+updated:
+    - routes/web.php
 models:
     User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string nullable' }
+    Vacancy: { name: 'string:40, nullable', softdeletes: softDeletes }
+    Position: { name: 'string:40, nullable', vacancy_id: 'integer, nullable', softdeletes: softDeletes }
+    Application: { vacancy_id: 'integer, nullable', notice_period: 'integer, nullable', softdeletes: softDeletes }
+    Document: { name: 'string:40, nullable', softdeletes: softDeletes }
